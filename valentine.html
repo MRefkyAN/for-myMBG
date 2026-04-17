@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Putri Ummuhani</title>
+
+    <!-- Gabungkan CSS -->
+    <link rel="stylesheet" href="css/valentine.css" />
+    <link rel="stylesheet" href="css/lastpage.css" />
+
+    <style>
+      /* Sembunyikan halaman thank you dulu */
+      #thankYouPage {
+        display: none;
+        text-align: center;
+      }
+
+      #valentinePage {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HALAMAN PERTAMA -->
+    <audio id="bgm" loop autoplay>
+      <source src="./src/happy-birthday-155461.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="valentinePage">
+      <div id="valentineQuestion">
+        <b>maukah kamu dinner denganku besok malam?</b>
+      </div>
+
+      <button class="answerButton" id="yesButton">MAAAUUUUUUUUU</button>
+
+      <button class="answerButton" id="noButton">trda</button>
+
+      <br />
+      <img src="./src/cat.gif" alt="cat asking question" class="responsive" />
+    </div>
+
+    <!-- HALAMAN THANK YOU -->
+    <div id="thankYouPage">
+      <div id="thankyou"><b>Makasi Princess Becca</b></div>
+
+      <img
+        id="rizz"
+        src="./src/rizz.gif"
+        alt="rizzler god"
+        class="responsive"
+      />
+      <br />
+
+      <audio controls autoplay loop>
+        <source src="./src/congratulations.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <script>
+      const yesButton = document.getElementById("yesButton");
+      const noButton = document.getElementById("noButton");
+
+      // Saat klik "Mauuuu"
+      yesButton.addEventListener("click", function () {
+        document.getElementById("valentinePage").style.display = "none";
+        document.getElementById("thankYouPage").style.display = "block";
+      });
+
+      // Saat klik "trada"
+      noButton.addEventListener("click", function () {
+        let currentFontSize = parseInt(
+          window.getComputedStyle(yesButton).fontSize
+        );
+        yesButton.style.fontSize = currentFontSize + 10 + "px";
+      });
+    </script>
+  </body>
+</html>
