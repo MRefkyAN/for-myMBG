@@ -1360,7 +1360,7 @@
         "walaupun sering kubuat badmood hehehehe😁",
       ];
 
-      function typeWriter(textArray, containerId, speed = 20) {
+      function typeWriter(textArray, containerId, speed = 50) {
         const container = document.getElementById(containerId);
         container.innerHTML = "";
         let lineIndex = 0;
@@ -1400,7 +1400,7 @@
         ui.page1.classList.remove("hidden");
         ui.page2.classList.add("hidden");
         setTimeout(
-          () => typeWriter(wishes_part1, "typewriter-text-1", 60),
+          () => typeWriter(wishes_part1, "typewriter-text-1", 30),
           100
         );
       });
@@ -1412,7 +1412,7 @@
         ui.page2.classList.remove("hidden");
         // 重新触发第二页的打字机
         setTimeout(
-          () => typeWriter(wishes_part2, "typewriter-text-2", 60),
+          () => typeWriter(wishes_part2, "typewriter-text-2", 30),
           100
         );
       });
@@ -1580,7 +1580,7 @@
           isTouching
         ) {
           isBlowing = true;
-          blowProgress += 3;
+          blowProgress += 2;
         } else {
           isBlowing = false;
           blowProgress -= 0.3;
